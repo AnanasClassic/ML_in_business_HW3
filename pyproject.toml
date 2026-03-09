@@ -1,0 +1,30 @@
+[project]
+name = "hw3-m5-elasticity"
+version = "0.1.0"
+description = "HW3: M5 price elasticity and demand forecasting analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "jupyterlab>=4.4.0",
+    "matplotlib>=3.10.1",
+    "nbformat>=5.10.4",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+]
+
+[project.scripts]
+hw3-run = "hw3.pipeline:main"
+hw3-build-notebook = "hw3.build_notebook:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hw3"]
+
+[tool.uv]
+package = true
